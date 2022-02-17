@@ -1,0 +1,30 @@
+Creating new bookings
+---------------------
+Bookings can be created successfully.
+All fields are mandatory, a booking cannot be created without First Name, Surname, Price, Deposit, Check-in, Check-out.
+The date picker UI allows manual entry of a valid date.
+Most invalid manually entered dates will not result in successful booking creation. One exception, see leap-year defect below.
+A duplicate booking can be created successfully.
+
+Possible Defects
+	A booking can be created with a negative price.
+	A booking can be created with an earlier check-out date than check-in date.
+	A booking can be created for a past period.
+	A booking can be created with a price to more than 2 decimal places.
+	A booking can be created with an invalid leap-year date, e.g. 2022-02-29, which results in a date of 2022-03-01 being used.
+	
+UX issues
+	Overall lack of styling and finish.
+	There is a noticeable delay between creating a booking and the booking appearing in the list of bookings, without any transient animated spinner.
+	The Deposit dropdown remains on the last option the user made when creating a booking, rather than returning to the first option.
+	The Check-out date picker does not limit choice to, nor default to, the Check-in date which would be convenient.
+	
+Cancelling bookings
+-------------------
+An existing booking can be successfully deleted.
+
+Application architecture
+------------------------
+The application is quite 'chatty', making a REST call for existing booking IDs, followed by a subsequent call for details of each individual booking. A single call would seem appropriate.
+The application is not secured by HTTPS.
+The application is not secured by authentication.
