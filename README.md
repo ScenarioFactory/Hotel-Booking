@@ -2,6 +2,8 @@
 
 **HotelBooking.Specs** - sample tests covering the Hotel Booking application. The approach used is component-level page objects. I have favoured pre-test teardown rather than post-test, as this produces more robust tests and allows post-test analysis.
 
+**HotelBooking.Specs.Playwright** - the same sample tests covering the Hotel Booking application but using the Playwright library.
+
 **HotelBooking.Specs.Screenplay** - the same sample tests covering the Hotel Booking application but using the Screenplay pattern.
 
 **ExploratoryTestingNotes.txt** - manual, exploratory testing notes.
